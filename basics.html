@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    
+    
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113079645-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113079645-1');
+</script>
+
+    <title>Avant Docs</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicoln.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+
+<body class="body-blue">
+    
+    
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="#">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Avant</span><span class="text-bold">drone</span>
+                            
+                        </a>
+                        <a href="http://www.ouropreto.ifmg.edu.br/">
+                        <img class="img-responsive" align="right" width="200" height="50" src="assets/images/site/ufmg.png" alt="batata" />
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="#">Início</a></li>
+                    <li class="active">Introdução</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> AVANTE UFMG!</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Última Atualização: 03 de Fevereiro de 2018</div>
+                    <div class="meta"><i class="fa icon_tag"></i> Por: CaioTBC</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Introdução</h2>
+                                <div class="section-block">
+                                    <p>Essa documentação tem como objetivo demonstrar os processos básicos necessários para o desenvolvimento dos softwares envolvidos na construção do MAV da Avant UFMG. Os procedimentos serão organizados em dois sistemas: o <b>sistema embarcado (PX4 Firmware) </b> e o <b>sistema de controle em solo (QGroundControl/Mission Planner)</b>.
+                                    </p>
+                                    
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Plataformas Suportadas</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Geral</h3>
+                                    <p>Todas as etapas demonstradas a seguir foram executadas no sistema operacional Microsoft Windows 7 Home Basic x64 Service Pack 1, e portanto todos os links se destinam a essa plataforma. Apesar disso, todo o conjunto de software pode ser utilizado em Linux ou Mac OSX.
+                                    </p>
+                                    
+                                </div><!--//section-block-->
+                                
+                                
+                            </section><!--//doc-section-->
+                            
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Programas Básicos</h2>
+                                <div class="section-block">
+                                    
+                                    
+                                </div><!--//section-block-->
+                                <div id="html" class="section-block">
+                                  <h3 class="block-title">JAVA</h3>
+                                  <br>
+                                    <p>
+                                        Seu computador precisa ter instalado o Kit de desenvolvimento JAVA SE 8 (JDK) nas versões x86 e x64. O software pode ser baixado no seguinte link:</p>
+                                        <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i> Download JDK 8</a></p
+
+                                <p>Após a instalação do JDK, confirme o sucesso do procedimento digitando o comando</p>
+                                        <pre><code class="language-git">java - version </code></pre>
+                                        <p>no prompt de comando do Windows. O resultado deve ser semelhante ao da seguinte imagem:</p>
+                                        
+                                        <img class="img-responsive" src="assets/images/tuto/image001.png" alt="batata" />
+                                        
+                                </div><!--//section-block-->
+                                
+                                
+                                 <div id="css"  class="section-block">
+                                    <h3 class="block-title">GIT</h3>
+                                    <br>
+                                    <p>Para o desenvolvimento dos programas, utilizaremos o gerente de configuração de software (SCM) Git. Para baixá-lo, basta seguir o link e procurar pela última versão estável para Windows:
+                                    </p>
+                                    <a href="https://git-scm.com/" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i> Download Git</a></p
+                                 <p>O instalador irá apresentar diversas opções, é recomendável deixá-las no padrão e apenas clicar em "next" até a conclusão do processo:</p>
+                                   <img class="img-responsive" src="assets/images/tuto/image003.png" alt="batata" />       
+                                   <br>
+
+                              <div id="less"  class="section-block">
+                                    <h3 class="block-title">.NET Framework</h3>
+                                    <br>
+                                    <p>É preciso obter a última versão do Microsoft .NET framework através do link:
+                                    </p>
+                                    <a href="https://www.microsoft.com/net/download/dotnet-framework-runtime" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i> Download .NET Framework</a></p
+                                 <p>A instalação pode levar alguns minutos dependendo do seu hardware e da velocidade de sua conexão com a internet.</p>
+                                 
+                             <div id="sass"  class="section-block">
+                                    <h3 class="block-title">Python 2.7</h3>
+                                    <br>
+                                    <p>O  Python pode ser baixado em:
+                                    </p>
+                                    <a href="https://www.python.org/downloads/" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i> Download Python</a></p
+                                 <p>É importante baixar a versão 2.7, já que a versão 3.6 é incompatível com alguns dos softwares. Caso seu computador já possua a versão 3.6, não é necessário removê-la.</p>
+                                 <p>Após concluir o instalador, verifique a sucesso do procedimento digitando o comando 
+                                 </p> 
+                                 <pre><code class="language-git">python --version </code></pre>
+                                  <p>no prompt de comando do Windows . O resultado deve ser semelhante ao da seguinte imagem:</p>
+                                    <img class="img-responsive" src="assets/images/tuto/image005.png" alt="batata" />                        
+                               
+                                
+                                
+                            </section><!--//doc-section-->
+                            <section id="callouts-section" class="doc-section">
+                                <h2 class="section-title">Firmware da PixHawk</h2>
+                                
+                                <div id="gitrepo"  class="section-block">
+                                    <h3 class="block-title">Repositório do GitHub</h3>
+                                    <br>
+                                    <p>O código fonte que será carregado na PixHawk fica armazenado no repositório público da Ardupilot no GitHub. Para clonar esse repositório em seu computador, crie uma pasta qualquer em um local de sua preferência. É importante que o caminho não tenha espaços, por exemplo, o seguinte caminho é válido:</p>
+                                    <img class="img-responsive" src="assets/images/tuto/image059.png" alt="batata" />  
+                                    <br>
+                                 <p>Já o caminho:</p>
+                                     <img class="img-responsive" src="assets/images/tuto/image058.png" alt="batata" />  
+                                     <br>
+                                     <p>não é válido.
+                                        Em seguida, com a tecla shift pressionada, clique com o botão direito em um local qualquer dentro da pasta criada e selecione "Abrir janela de comando aqui":
+                                    </p>
+                                <img class="img-responsive" src="assets/images/tuto/image011.png" alt="batata" /> 
+                                <br>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Dica:</h4>
+                                            <p>Certifique-se de que a pasta foi acessada por um caminho verdadeiro e não através de uma "biblioteca", caso contrário a opção "abrir janela de comando aqui" não estará disponível</p>
+                                        </div><!--//content-->
+                                    </div>
+                                <p>Com o prompt de comando aberto, digite o comando para clonar o repositório:</p>
+                                    <pre><code class="language-git">git clone</code></pre>
+                                <p> Em seguida, copie o link </p>
+                                 <pre><code class="language-markup"></code>https://github.com/ArduPilot/ardupilot.git</pre>
+                                <p> e cole no prompt usando o botão direito. O comando completo ficará dessa forma:
+                                </p>						
+				<img class="img-responsive" src="assets/images/tuto/image060.png" alt="batata" /> 
+                                <br>
+                                
+                                <p>Após inserir o comando, tecle enter para baixar o repositório na pasta escolhida: </p>
+				<img class="img-responsive" src="assets/images/tuto/image061.png" alt="batata" /> 
+                                <br>						
+                                   
+                                <p>O próximo passo é inicializar o código fonte utilizando o comando:</p>
+                                <pre><code class="language-git"></code>git submodule update --init --recursive</pre>
+                                
+                                <img class="img-responsive" src="assets/images/tuto/image062.png" alt="batata" /> 
+                                <br>
+                                
+                                <p>Nesse momento, o código fonte está pronto para ser editado e compilado para o firmware da PixHawk. Em seguida, baixaremos a IDE que será utilizada para facilitar esses procedimentos.</p>
+
+                             
+                                </div>
+                                 <div id="arduino"  class="section-block">
+                                    <h3 class="block-title">Eclipse IDE</h3>
+                                    <br>
+                                    <p>
+                                        Apesar de ser possível usar o make para compilar diretamente o firmware, o uso de um ambiente de desenvolvimento integrado (IDE) facilita muito o processo de escrever e editar o código. Usaremos o Eclipse, um IDE de código aberto que suporta desenvolvimento em inúmeras linguagens de programação como Java, C/C++, PHP, Python e Android. Todavia, a versão padrão do ambiente de desenvolvimento não é capaz de compilar o firmware, e por isso é necessário usar uma versão modificada. A equipe da Ardupilot disponibiliza um pacote com essa versão do Eclipse e diversas outras ferramentas indispensáveis chamado "PX4 toolchain":
+                                    </p>
+                                    <a href="http://firmware.ardupilot.org/Tools/PX4-tools/pixhawk_toolchain_installer_latest.exe" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i>PX4 Toolchain para Windows</a>
+                                    <br>
+                                    <br>
+                                    
+                                    <p>Após o download, basta executar o arquivo e instalar o programa em seu destino padrão. </p>
+                                 </div>
+                                    
+                            <div id="apmup"  class="section-block">
+                                    <h3 class="block-title">Configurando o Eclipse</h3>
+                                    <br>
+                                    <p> Após a instalação do PX4 Toolchain, abra o Eclipse através do atalho criado no menu iniciar:
+                                    </p>
+                                    <img class="img-responsive" src="assets/images/tuto/image063.png" alt="batata" /> 
+                                    <br>
+                                    
+                                    <p>
+                                        Escolha o workspace padrão:
+                                    </p>
+                                    <img class="img-responsive" src="assets/images/tuto/image064.png" alt="batata" /> 
+                                    <br>
+                                    <p>Criaremos agora um novo projeto para organizar o código fonte:</p>
+                                    <div class="row">
+                                        <div class="">
+                                           
+                                            <ul class="list">
+                                                <li>Vá até File>New>Makefile Project with Existing Code.</li>
+                                                <li>Em "existing code location", escolha a pasta ArduPlane (nosso firmware usa a versão de asa fixa) , dentro da pasta de onde foi baixado o firmware ArduPilot do GitHub.</li>
+                                                <li>Em "ToolChain for Indexer Settings" escolha CrossGCC.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="assets/images/tuto/image065.png" alt="batata" /> 
+                                    <br>
+                                    
+                                    <p>Vá para a Workbench clicando no seguinte símbolo na página inicial:</p>
+                                    <img class="img-responsive" src="assets/images/tuto/image066.png" alt="batata" /> 
+                                    <br>
+                                    <p>
+                                        Em seguida, no Project Explorer na lateral direita, clique com o botão direito na pasta do projeto
+                                    </p>   
+                                        <img class="img-responsive" src="assets/images/tuto/image068.png" alt="batata" /> 
+                                        <br>
+                                    <p>   
+                                        e escolha Properties. No campo "Build Location" escolha a mesma pasta ArduPlane do passo anterior:
+                                    </p>
+                                     <img class="img-responsive" src="assets/images/tuto/image067.png" alt="batata" /> 
+                                        <br>
+                                    <p>Por último, configure o make em:</p>
+                                     <img class="img-responsive" src="assets/images/tuto/image069.png" alt="batata" /> 
+                                        <br>
+                                   
+                                        
+                                <div id="pixom"  class="section-block">
+                                    <h3 class="block-title">Editando e compilando o firmware</h3>
+                                    <p>Com o projeto aberto e configurado no Eclipse, é possível modificar qualquer arquivo através do Project Explorer. Após realizar as modificações necessárias, basta usar o seguinte ícone para iniciar o processo de compilação:</p>
+                                    <img class="img-responsive" src="assets/images/tuto/image070.png" alt="batata" /> 
+                                        <br>
+                                        <p>Após um longo processo de compilação (Ou não, se vc for o Iure), o arquivo de firmware será criado na pasta ArduPlane com a extensão .px4 e pode ser carregado para a pixhawk usando o MissionPlanner na opção de "custom firmware".</p>    
+                                     
+                                </div>
+                            </div>
+                                
+                            </section>
+                            
+                             
+                                
+                            <section id="gcs" class="doc-section">
+                                <h2 class="section-title">Mission Planner</h2>
+                                <br>
+                                 <div id="noob"  class="section-block">
+                                    <h3 class="block-title">Programa pré-compilado</h3>  
+                                    <br>
+                                    <p>Apesar da estação-solo utilizada em nossos testes ser o qGroundControl, o Mission Planner é importante por sua maior capacidade de customização, e principalmete a opção de carregar um firmware customizado. Em um primeiro momento, talvez seja interessante usar a versão pronta do Mission Planner. Ela pode ser baixada no link:</p>
+                                 <a href="http://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.msi" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i>Mission Planner</a>
+                                 <br>
+                                 <br>
+                                 <img class="img-responsive" src="assets/images/tuto/image045.png" alt="batata" /> 
+                                 <br>
+                                 <p>Com o intuito de tornar esta documentação mais completa, os passos a seguir orientam a compilar o Mission Planner a partir da fonte. Com isso, a equipe pode personalizar a estação.</p>
+                                 </div>
+                                <div id="gitrepo3"  class="section-block">
+                                    <h3 class="block-title">Repositório do GitHub</h3>
+                                    <p>Use o comando</p> 
+                                    <pre><code class="language-python"></code>git clone https://github.com/ArduPilot/MissionPlanner</pre>  
+                                <p>para clonar o repositório.
+                                </p>
+                                </div>
+                                <div id="comp2"  class="section-block">
+                                    <h3 class="block-title">Compilando a partir do código fonte</h3>  
+                                    <br>
+                                    <p>
+                                        Para compilar o Misson Planner, é necessário possuir o Microsoft Visual Studio 2017 instalado no computador. A IDE é gratuita e pode ser baixada no link:
+                                    </p>
+                                    <a href="https://www.visualstudio.com/pt-br/downloads/" class="btn btn-blue" target="_blank"><i class="fa fa-download"></i>Microsoft Visual Studio 2017</a>
+                                    <br>
+                                    <br>
+                                    <p>Escolha a versão "Visual Studio Community 2017". Após abrir o executável, o instalador irá mostrar a tela de seleção de cargas de trabalho: 
+                                    </p>
+                                     <img class="img-responsive" src="assets/images/tuto/image047.png" alt="batata" /> 
+                                     <br>
+                                     <p>Marque as opções "Desenvolvimento para desktop com o .NET" em Windows e "Desenvolvimento de multiplataforma do .NET Core" em Outros conjuntos de ferramentas e as instale. Certifique-se de possuir o espaço em disco necessário para os componentes.
+                                     </p>
+                                     <p> Após o download, inicie o Visual Studio e vá em Arquivo>Abrir>Projeto/solução. Navegue até a pasta onde foi baixado o repositório no item acima e escolha "MissionPlanner.sln". No canto superior, escolha "Release" e "x86". (x64 causou erro no meu computador, ainda não sei porque).
+                                     </p>   
+                                     <img class="img-responsive" src="assets/images/tuto/image051.png" alt="batata" /> 
+                                     <br>
+                                     <p>O projeto agora está configurado e pode ser modificado de acordo com as necessidades do programador. Um exemplo básico é simplesmente personalizar um gráfico da interface. Nessa demonstração, substituiremos a logo da ArduPilot por uma logo customizada. Para realizar esta modificação, copie o arquivo de imagem desejado para a pasta MissionPlanner/Resources. Em seguida, no Visual Studio, localize o arquivo resources.resx dentro da pasta Properties: 
+                                     </p>
+                                     <img class="img-responsive" src="assets/images/tuto/image049.png" alt="batata" /> 
+                                     <br>
+                                     <p>
+                                         Este arquivo contém as strings que apontam para os arquivos de imagem do programa. O arquivo a ser trocado está localizado na última linha. Basta substituir a linha: 
+                                     </p>
+                                     <pre><code class="language-javascript"></code> &lt;value>..\Resources\ 0d92fed790a3a70170e61a86db103f399a595c70.png;System.Drawing.Bitmap,<br> System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a &lt;/value></pre>  
+                                     <p>Por:</p>
+                                     <pre><code class="language-javascript"></code> &lt;value>..\Resources\avant.png;System.Drawing.Bitmap,<br> System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&lt;/value></pre> 
+                                     <p>
+                                         Onde avant.png é o nome do arquivo de imagem escolhido. O resultado ficará: 
+                                     </p>
+                                     <img class="img-responsive" src="assets/images/tuto/image053.png" alt="batata" /> 
+                                     <br>
+                                     <p>Para compilar o projeto, selecione Compilação>Compilação em lotes no canto superior:</p>
+                                     <img class="img-responsive" src="assets/images/tuto/image055.png" alt="batata" /> 
+                                     <br>
+                                     <p>Na janela aberta, selecione tudo e clique em compilar. O processo poderá levar alguns minutos dependendo da configuração do seu computador. 
+                                    Após o término, navegue até a pasta MissionPlanner\bin\Release\net461. O programa pode ser aberto clicando em "MissionPlanner.exe" e deverá mostrar a imagem personalizada no canto superior direito, dessa forma: 
+                                     </p>
+                                    <img class="img-responsive" src="assets/images/tuto/image057.png" alt="batata" />  
+                                </div>
+                                
+                                
+                            </section><!--//doc-section-->
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                                <li><a class="scrollto" href="#download-section">Introdução</a></li>
+                                <li>
+                                    <a class="scrollto" href="#installation-section">Plataformas Suportadas</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#step1">Geral</a></li>
+                                        <li><a class="scrollto" href="#step2">Sistema Embarcado</a></li>
+                                        <li><a class="scrollto" href="#step3">Sistema de controle em Solo</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#code-section">Programas Básicos</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#html">JAVA</a></li>
+                                        <li><a class="scrollto" href="#css">Git</a></li>
+                                        <li><a class="scrollto" href="#less">.NET Framework</a></li>
+                                        <li><a class="scrollto" href="#sass">Python 2.7</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#callouts-section">Firmware da PixHawk Mini</a>
+                                       <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#gitrepo">Repositório do GitHub</a></li>
+                                        <li><a class="scrollto" href="#arduino">Eclipse IDE</a></li>
+                                        <li><a class="scrollto" href="#apmup">Configurando o Eclipse</a></li>
+                                        <li><a class="scrollto" href="#pixom">Editando e compilando o firmware</a></li>
+                                    </ul><!--//nav-->
+                                
+                                </li>
+                                
+                                <li>
+                                    <a class="scrollto" href="#gcs">Mission Planner</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#noob">Programa pré-compilado</a></li>
+                                        <li><a class="scrollto" href="#gitrepo3">Repositório do GitHub</a></li>
+                                        <li><a class="scrollto" href="#comp2">Compilando a partir do código fonte</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+      
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Design por <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a>. Conteúdo por CaioTBC</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- Start 1FreeCounter.com code -->
+  
+  <script language="JavaScript">
+  var data = '&r=' + escape(document.referrer)
+	+ '&n=' + escape(navigator.userAgent)
+	+ '&p=' + escape(navigator.userAgent)
+	+ '&g=' + escape(document.location.href);
+
+  if (navigator.userAgent.substring(0,1)>'3')
+    data = data + '&sd=' + screen.colorDepth 
+	+ '&sw=' + escape(screen.width+'x'+screen.height);
+
+  document.write('<a href="http://www.1freecounter.com/stats.php?i=132087" target=\"_blank\" >');
+  document.write('<img alt="Free Counter" border=0 hspace=0 '+'vspace=0 src="http://www.1freecounter.com/counter.php?i=132087' + data + '">');
+  document.write('</a>');
+  </script>
+  
+
+<!-- End 1FreeCounter.com code -->
+    
+</body>
+</html> 
+
+ 
