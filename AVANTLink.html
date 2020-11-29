@@ -29,7 +29,7 @@
     
 </head> 
 
-<body class="body-green">
+<body class="body-purple">
      <script async defer src="https://buttons.github.io/buttons.js"></script>
     <div class="page-wrapper">
         <!-- ******Header****** -->
@@ -41,11 +41,18 @@
                             <span aria-hidden="true" class="icon_documents_alt icon"></span>
                             <span class="text-highlight"></span>AVANT<span class="text-bold"> UFMG</span>
                         </a>
+						<div class="header-right">
+						<a href="https://ufmg.br/">
+							<img class="img-responsive" align="right" width="150" height="50" src="assets/images/UFMG.svg" alt="Logo da UFMG" />
+							<span class="text-bold" style="font-size:18px" align="right">Universidade Federal<br>de Minas Gerais</span>
+							<span class="vl"></span>
+						</a>
+					</div>
                     </h1>
                 </div><!--//branding-->
                 <ol class="breadcrumb">
-                    <li><a href="">Home</a></li>
-                    <li class="active">Quick Start</li>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="active">AVANTLink</li>
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
@@ -53,35 +60,35 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Comunicação WiFi/Serial com ardupilot usando MAVLink</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Última atualização: 24/06/2018<br>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Última atualização: 28/08/2018<br>
                     por Caio Tácito Borges da Costa<br>
-                    Instituto Federal de Minas Gerais - Campus Ouro Preto</div>
+                    AVANT UFMG</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
                         <div class="content-inner">
-                            <section id="download-section" class="doc-section">
+                            <section id="intro" class="doc-section">
                                 <h2 class="section-title">Breve introdução</h2>
                                 <div class="section-block">
                                     <p>
-                                    <h3 class="block-title">MAVLink</h3>
+                                    <h3 class="block-title" id="mavlink">MAVLink</h3>
                                         O MAVLink (Micro Aerial Vehicle Link) é um protocolo de comunicação criado em 2009 por Lorenz Meier, projetado especificamente para a comunicação entre pequenos veículos não tripulados, e que cumpre esse objetivo de forma confiável, leve e aberta. 
                                     </p>
-                                    <h3 class="block-title">ArduPilot</h3>
+                                    <h3 class="block-title" id="ardupilot">ArduPilot</h3>
                                     <p>
                                         Também open-source, o ArduPilot é um ambicioso projeto de piloto automático, que engloba softwares embarcados, estações-solo e utilidades para controle de drones de asa rotativa, asa fixa, VTOL, helicópteros, rovers terrestres, barcos e submarinos. 
                                     </p>    
                                     
                                 </div>
                             </section><!--//doc-section-->
-                            <section id="installation-section" class="doc-section">
+                            <section id="tutorial" class="doc-section">
                                 <h2 class="section-title">O Tutorial</h2>
-                                <div id="step1"  class="section-block">
+                                <div class="section-block">
                                    <h3 class="block-title">Mas por que?</h3>
                                     
                                     Este tutorial destina-se ao suprimento da necessidade de uma documentação clara, detalhada e em português sobre a comunicação entre um piloto automático e um computador companhia via MAVLink. A conexão entre esses dois dispositivos é importante para aumentar o número de tarefas que um veículo aéreo pode realizar, usando um computador de bordo adicional. 
                                     <br><br>
-                                    <h3 class="block-title">Convenções</h3>
+                                    <h3 class="block-title" id="convencoes">Convenções</h3>
                                     Para facilitar o entendimento dos conceitos e evitar ambiguidades, a seguinte lista de convenções de nomenclatura será seguida durante todo o artigo:
                                     <br><br>
                                     <div class="row">
@@ -92,14 +99,14 @@
         										<li><b>PX4:</b> Refere-se à PixHawk 4, versão mais recente (no momento da escrita) da placa controladora PixHawk;</li>
         										<li><b>RPi:</b> Refere-se à Raspberry Pi, computador miniatura baseado em ARM;</li>
         										<li><b>WP:</b> Significa Waypoint, um ponto no mapa que indica um local no caminho do drone;</li>
-        										<li><b>WP:</b> Significa User Datagram Protocol, um protocolo que não garante nem a entrega nem a seqüência correta de pacotes entregues;</li>
+        										<li><b>UDP:</b> Significa User Datagram Protocol, um protocolo que não é determinístico nem quanto a entrega nem quanto a seqüência correta de pacotes entregues;</li>
         										<li><b></b> Reservado</li>
                                             </ul>
                                         </div>
                                     </div>
                                     Além das convenções de nomenclatura, assume-se que o o piloto automático é uma APM e o computador embarcado é uma RPi. Outras configurações podem funcionar ou não, mas YOLO.
                                     <br><br>
-                                    <h3 class="block-title">Objetivo</h3>
+                                    <h3 class="block-title" id="objetivo">Objetivo</h3>
                                     Chegando ao fim destas instruções, você será capaz de:
                                     <br><br>
                                     <div class="row">
@@ -120,7 +127,7 @@
                                 </div><!--//section-block-->
                                 </section>
                                 
-                                <section id="download-section" class="doc-section">
+                                <section id="avantlink" class="doc-section">
                                     <h2 class="section-title">A biblioteca AVANTLink</h2>
                                     <div class="section-block">
                                         Sentindo a necessidade de criar um programa personalizado para realizar as missões da competição AUVSI-SUAS, a equipe AVANT está desenvolvendo uma bilbioteca open-source com o objetivo de simplificar o protocolo MAVLink e as conexões seriais e UDP. O código completo pode ser conferido no nosso repositório do github: 
@@ -131,14 +138,19 @@
                                     </div>
                                 </section>
                                 
-                                <section id="download-section" class="doc-section">
+                                <section id="estrutura-mavlink" class="doc-section">
                                     <h2 class="section-title">Estrutura de uma mensagem MAVLink</h2>
                                     <div class="section-block">
-                                        < insertmavmessagedescriṕtionhere >
+                                        <div class="github-btn mb-2">
+											<a class="github-button" href="https://github.com/mavlink/mavlink-devguide" data-size="large">Guia de MAVLink</a>
+										</div>
+										<button class="btn">
+											<a href="https://mavlink.io/en/"><b>Documentação MAVLink</b></a>
+										</button>
                                     </div>
                                 </section>
                                 
-                                <section id="download-section" class="doc-section">
+                                <section id="exemplo" class="doc-section">
                                     <h2 class="section-title">Enviando um comando para a APM usando C++</h2>
                                     <div class="section-block">
                                         <h3 class="block-title">Modo UDP</h3>
@@ -190,24 +202,21 @@ int main(int argc, char* argv[]) //Função principal
                     <div class="doc-sidebar hidden-xs">
                         <nav id="doc-nav">
                             <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
-                                <li><a class="scrollto" href="#download-section">O Projeto</a></li>
+                                <li><a class="scrollto" href="#intro">Introdução</a></li>
                                 <li>
-                                    <a class="scrollto" href="#installation-section">Aquisição de dados</a>
+                                    <a class="scrollto" href="#tutorial">O Tutorial</a>
                                     <ul class="nav doc-sub-menu">
-                                        <li><a class="scrollto" href="#step1">Computador embarcado</a></li>
-                                        <li><a class="scrollto" href="#step2">Computador cliente</a></li>
-                                        <li><a class="scrollto" href="#step3">Código</a></li>
+                                        <li><a class="scrollto" href="#convencoes">Glossário</a></li>
+                                        <li><a class="scrollto" href="#objetivo">Objetivos</a></li>
                                     </ul><!--//nav-->
                                 </li>
-                                <li>
-                                    <a class="scrollto" href="#dash">Dashboard</a>
-                                    <ul class="nav doc-sub-menu">
-                                        <li><a class="scrollto" href="#base">Base</a></li>
-                                        <li><a class="scrollto" href="#xml">XML</a></li>
-                                        <li><a class="scrollto" href="#rdm">Testes</a></li>
-                                    </ul><!--//nav-->
+								<li>
+                                    <a class="scrollto" href="#avantlink">AVANTLink</a>
                                 </li>
-                                <li><a class="scrollto" href="#gerador">Gerador</a></li>
+                                <li>
+                                    <a class="scrollto" href="#estrutura-mavlink">Estrutura de Mensagem<br>do MAVLink</a>
+                                </li>
+                                <li><a class="scrollto" href="#exemplo">Enviando um Comando<br> para a APM usando C++</a></li>
                             </ul><!--//doc-menu-->
                         </nav>
                     </div><!--//doc-sidebar-->
@@ -223,7 +232,7 @@ int main(int argc, char* argv[]) //Função principal
     <footer id="footer" class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Docs written by CaioTBC - <a href="http://programaacao.net.br/" targe="_blank">IFMG Campus Ouro Preto</a>  | </small>
+            <small class="copyright">Docs written by CaioTBC - <a href="https://avant-ufmg.wixsite.com/avantufmg" targe="_blank">AVANT UFMG</a>  | </small>
             
             <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a> for developers</small>
             <br>
