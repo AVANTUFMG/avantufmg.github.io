@@ -352,6 +352,12 @@ select {
   font-weight: 800;
   color: #fff;
 }
+
+.vl {
+  border-left: 3px solid turquoise;
+  height: 24px;
+}
+
 .branding .icon {
   font-size: 24px;
   color: #40babd;
@@ -573,6 +579,8 @@ select {
 .callout-info {
   background: #58bbee;
   color: #fff;
+  width: 100%;
+  padding:1px;
 }
 .callout-success {
   background: #75c181;
@@ -692,6 +700,12 @@ select {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;
 }
+
+.header-right {
+    float: right;
+    text-align: right;
+}
+
 .card {
   text-align: center;
   border: 1px solid #e3e3e3;
