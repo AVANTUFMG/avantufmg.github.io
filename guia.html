@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="pt" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="pt" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="pt-br"> <!--<![endif]-->  
+<html>
+
+<head>
+    <title>Guia de Aprendizado para Programação/Eletrônica da AVANT</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicoln.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="body-blue">
+	<div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Avant</span><span class="text-bold"> UFMG</span>
+                        </a>
+                        
+                    
+					<div class="header-right">
+						<a href="https://ufmg.br/">
+							<img class="img-responsive" align="right" width="150" height="50" src="assets/images/UFMG.svg" alt="Logo da UFMG" />
+							<span class="text-bold" style="font-size:18px" align="right">Universidade Federal<br>de Minas Gerais</span>
+							<span class="vl"></span>
+						</a>
+					</div>
+					</h1>
+                </div><!--//branding-->				
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="active">Introdução</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+		<div class="doc-wrapper">
+			<div class="container">
+				<div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-book"></i> Guia de Aprendizado para <br>Programação/Eletrônica da AVANT</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Última Atualização: 29 de Novembro de 2020</div>
+                    <div class="meta"><i class="fa icon_tag"></i> Por: Caio Conti</div>
+                </div>
+				<!--//doc-header -->
+				<div class="doc-body">
+					<main class="doc-content" label>
+						<section class="content-inner">
+							<section class="doc-section" id="introducao">
+								<h2 class="section-title">Introdução</h2>
+								<p>O objetivo deste guia é exatamente unir deixar claro sites, vídeos, documentos de aprendizado para os tópicos do contexto da iniciativa AVANT UFMG, ou seja, para aeronaves autônomas. Este documento deve ser atualizado constantemente pelos membros.<br><br>
+									Para saber mais sobre a AVANT acesse o site: <a href="https://avant-ufmg.wixsite.com/avantufmg">https://avant-ufmg.wixsite.com/avantufmg</a><br>
+									Todos relatórios técnicos completos e públicos se encontram aqui: <a href="https://drive.google.com/drive/u/0/folders/1Hdz1nv4uH7lsDzs-XulJL0Ub4Opml2fZ">Drive Público AVANT</a><br>
+									Os códigos podem ser vistos no github: <a href="https://github.com/AVANTUFMG/AVANTLink">https://github.com/AVANTUFMG/AVANTLink</a></p>
+							</section>
+							
+							<section class="doc-section" id="pythonnoob">
+								<h2 class="section-title">Python para Iniciantes</h2>
+								<p>Este site é muito bom para começar a aprender os básicos de programação em Python:<br><a href="https://www.learnpython.org/">https://www.learnpython.org/</a></p>
+								<p>Sugerimos a seguinte playlist de python para os que ainda não conhecem programação:<br><a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6">https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6</a></p>
+							</section>						
+							
+							<section class="doc-section" id="integracao">
+								<h2 class="section-title">Integração de Sistemas</h2>
+								<p>Essa é a área responsável pela comunicação entre os dois diferentes tipos de hardware utilizados em um projeto de drones autônomos, o computador de bordo e a controladora. No nosso caso utilizamos uma raspberry pi e pixhawk.<br>
+									No caso da AVANT a comunicação entre ambos os hardwares se dá utilizando o protocolo MAVLink, no entanto, a programação utilizando apenas o protocolo como base é de muito baixo nível e trabalhosa. Para melhorar a situação utilizaremos o ROS (Robot Operating System), framework utilizado que abstrai e facilita essa comunicação que é muito utilizado para toda área de robótica.<br>
+									Utilizaremos então o pacote Mavros que faz a ponte entre o ROS e o protocolo MAVLink, veja o tópico do ROS para entender melhor.</p>
+								<p>Sugerimos a seguinte playlist de python para os que ainda não conhecem programação:<br><a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6">https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6</a></p>
+								
+								<article id="comunicacao-wifi" class="section-block">
+									<h3 class="block-title">Comunicação com Wifi</h3>
+									<p>O documento “<a href="https://drive.google.com/file/d/1jd6OjqJyxdhe5hmFh7nz6wxVSnbxnLhD/view?usp=sharing">Andorinha Autônoma</a>” descreve as conexões, piloto automático e comunicação WiFi da Pixhawk com Raspberry. Esse documento é útil apesar de não retratar com exatidão a operação da AVANT atualmente.</p>
+								</article>
+							</section>
+
+							<section class="doc-section" id="ros">
+								<h2 class="section-title">ROS (Robot Operating System)</h2>
+								<p>A documentação do ROS não é muito boa porém explicaremos e evidenciaremos os tutoriais e documentos que utilizamos para o conhecimento básico. Como esse sistema requer o conhecimento de novos conceitos recomendamos fortemente que o estudante anote as ideias básicas (o que é um nó, tópico, publisher...) para quando se perder ou confundir possa rapidamente olhar suas anotações e relembrar.<br>
+									Fica também a sugestão de quando estiver programando deixar sempre a página de tutoriais do ROS aberta e a utilize como uma espécie de apostila.</p>
+								
+								<article id="install-ros" class="section-block">
+									<h3 class="block-title">Instalação e Configuração</h3>
+									<p>Em <em>Core ROS Tutorials -> Begginer Level</em> da aula 1 até a aula 4 explicam como instalar o ROS e criar um pacote.  Você pode também seguir o tutorial da playlist mostrada no próximo item, porém o site tem algumas dicas interessantes que não tem nos vídeos. Por segurança nada o impede de ver os dois.<br><a href="http://wiki.ros.org/ROS/Tutorials">http://wiki.ros.org/ROS/Tutorials</a></p>
+								</article>
+								
+								<article id="conceitos-ros" class="section-block">
+									<h3 class="block-title">Conceitos e Programação Básica</h3>
+									<p>Os tutoriais do ROS do 5 até o 16 servem para entender os conceitos básicos e fazer simples programas, recomendo fortemente pelo menos a sua leitura.<br><a href="http://wiki.ros.org/ROS/Tutorials">http://wiki.ros.org/ROS/Tutorials</a></p>
+									<p>Segue uma excelente playlist, em português, muito bem explicativa sobre os básicos do ROS, ela basicamente (com exceções) segue os passos dos tutoriais do site. Vale a pena assistir até a aula 14, a aula 15 em diante diz sobre simulações, veja qual dos simuladores te interessa mais (nosso caso utilizamos o Gazebo). Você pode acessar a playlist <a href="https://www.youtube.com/watch?v=DcJhspJiHV4&list=PLhxZVyws6YtsbTPilPWwiPFEGf2ztH5kR">aqui</a><br><iframe width="560" height="315" src="https://www.youtube.com/embed/DcJhspJiHV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									<p>Criamos um documento com anotações sobre essa aula:<br><a href="https://drive.google.com/file/d/1Abr1z3Ndiyu4ymqji2Av0lACO1tdBTtY/view?usp=sharing">Guia com anotações sobre a aula da playlist</a>
+								</article>
+								
+								<article id="turtlebot" class="section-block">
+									<h3 class="block-title">Instalando o Turtlebot3 no Mellodic no Ubuntu 18.04</h3>
+									<p>Pode vir a ser útil ou interessante ao usuário saber como instalar o Turtlebot3 nessa versão.<br>O tutorial abaixo explica de forma fácil.<br><a href="https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros">https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros</a></p>
+								</article>
+								
+								<article id="python-ros" class="section-block">
+									<h3 class="block-title">Utilizando Python sem variáveis globais (classes)</h3>
+									<p>Pode ter visto que na playlist sugerida a pessoa utiliza variáveis globais no seu código, porém esse método não é o ideal, como python não consegue utilizar referências como o C++ podemos driblar criando classes. Segue abaixo um link explicando o funcionamento.<br><a href=" https://roboticsbackend.com/oop-with-ros-in-python/"> https://roboticsbackend.com/oop-with-ros-in-python/</a></p>
+								</article>
+								
+								<article id="fizemos-ros" class="section-block">
+									<h3 class="block-title">Como Fizemos na Competição</h3>
+									<p>Disponibilizamos uma aula de como fizemos a parte de controle para o Desafio de robótica PETROBRAS 2020 onde um drone simulado tinha que fazer várias missões como por exemplo pousar numa plataforma com visão computacional. Participamos desse projeto junto com a <a href="https://xquadufmg.com/">Xquad</a> time de drones do <a href="https://www.verlab.dcc.ufmg.br/">VeRLab</a>. Também disponibilizamos os documentos da competição e os github.</p>
+									<p>Aula explicativa por Caio Conti da AVANT sobre como fizemos o sistema funcionar com o ROS em Python, com <em><b>dicas e informações importantes</b></em> que descobrimos durante a competição e também sem utilizar variáveis globais. Fazer um pequeno documento com essas dicas pode ser interessante:<br><iframe width="560" height="315" src="https://www.youtube.com/embed/CX3fGPBugc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									<p>Nosso github da competição:<br><a href="https://github.com/AVANTUFMG/CompeticaoPetrobras2020">https://github.com/AVANTUFMG/CompeticaoPetrobras2020</a></p>
+									<p>Sobre o desafio (categorias -> simulação 3d -> Desafio de Robótica PETROBRAS):<br><a href="http://www.cbrobotica.org/">http://www.cbrobotica.org</a></p>
+									<p>Para mexer/simular nesses espaços seguem pdfs e github da competição:
+										<ul>
+											<li>Github da petrobras (também explicando como instalar):<br><a href="https://github.com/LASER-Robotics/Petrobras_Challenge">https://github.com/LASER-Robotics/Petrobras_Challenge</a></li>
+											<li>Github do sistema (mas explica no git da petrobras também):<br><a href="https://github.com/ctu-mrs/mrs_uav_system">https://github.com/ctu-mrs/mrs_uav_system</a></li>
+											<li>Documentação do sistema mrs_uav<br><a href="https://ctu-mrs.github.io/docs/system/uav_ros_interface.html">https://ctu-mrs.github.io/docs/system/uav_ros_interface.html</a></li>
+											<li>PDF da competição:<br><a href="https://drive.google.com/file/d/11FIZEAySuLh-3QkqDKS8rUDU-DtM04Y_/view?usp=sharing">PDF COMPETIÇÃO PETROBRAS</a></li>
+											<li>Regras auxiliares da competição (diz sobre a parte virtual de 2020):<br><a href="https://drive.google.com/file/d/1R5OrlU1JsNfebHDtPqy5MI2X_C1IAbK0/view?usp=sharing">PDF REGRAS AUXILIARES DA COMPETIÇÃO</a></li>
+										</ul>
+								</article>
+							</section>
+					</main>
+					<div class="doc-sidebar hidden-xs">
+						<nav id="doc-nav">
+							<ul id="doc-menu" class="nav doc-menu affix" data-spy="affix">
+                                <li><a class="scrollto" href="#introducao">Introdução</a>
+									<ul class="nav doc-sub-menu">
+										<li><a class="scrollto" href="#descricao-basica">Como Fazer?</a></li>
+										<li><a class="scrollto" href="#adicionando-nav">Adicionando no Menu<br> de Navegação</a></li>
+									</ul>									
+								</li>
+								<li><a class="scrollto" href="#pythonnoob">Python para Iniciantes</a>
+								</li>
+								<li><a class="scrollto" href="#integracao">Integração de Sistemas</a>
+									<ul class="nav doc-sub-menu">
+										<li><a class="scrollto" href="#comunicacao-wifi">Comunicação com Wifi</a></li>
+									</ul>
+								</li>
+								<li><a class="scrollto" href="#ros">ROS (Robot Operating<br>System)</a>
+									<ul class="nav doc-sub-menu">
+										<li><a class="scrollto" href="#install-ros">Instalação e Configuração</a></li>
+										<li><a class="scrollto" href="#conceitos-ros">Conceitos e Básico</a></li>
+										<li><a class="scrollto" href="#turtlebot">Instalando Turtlebot3</a></li>
+										<li><a class="scrollto" href="#python-ros">Python com Classes</a></li>
+										<li><a class="scrollto" href="#fizemos-ros">Como Fizemos<br>na Competição</a></li>
+										<li></li>
+									</ul>
+								</li>
+                            </ul>
+						</nav>
+					</div>
+					
+				
+				</div>
+				<!--//doc-body-->
+			</div>
+		</div>
+		
+		
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Design por <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a>. Conteúdo por <a href="https://avant-ufmg.wixsite.com/avantufmg" targe="_blank">AVANT UFMG</a></small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- Start 1FreeCounter.com code -->
+  
+	<script language="JavaScript">
+  var data = '&r=' + escape(document.referrer)
+	+ '&n=' + escape(navigator.userAgent)
+	+ '&p=' + escape(navigator.userAgent)
+	+ '&g=' + escape(document.location.href);
+
+  if (navigator.userAgent.substring(0,1)>'3')
+    data = data + '&sd=' + screen.colorDepth 
+	+ '&sw=' + escape(screen.width+'x'+screen.height);
+
+  document.write('<a href="http://www.1freecounter.com/stats.php?i=132087" target=\"_blank\" >');
+  document.write('<img alt="Free Counter" border=0 hspace=0 '+'vspace=0 src="http://www.1freecounter.com/counter.php?i=132087' + data + '">');
+  document.write('</a>');
+  </script>
+  
+
+	<!-- End 1FreeCounter.com code -->
+	</body>
+</html>
