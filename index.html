@@ -1,189 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <title>AVANT UFMG</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- FontAwesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
-</head> 
-
-    <!-- Main Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
-	<script type="text/javascript" src="assets/plugins/jquery.matchHeight.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
-    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
-    <script type="text/javascript" src="assets/js/main.js"></script>
-     <script>
-        function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-            /*make an HTTP request using the attribute value as the file name:*/
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                /*remove the attribute, and call this function once more:*/
-                elmnt.removeAttribute("w3-include-html");
-                includeHTML();
-                }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /*exit the function:*/
-            return;
-            }
-        }
-        }
-</script> 
-
-
-<body class="landing-page">   
-	
-	 
-	<!-- GITHUB BUTTON JS -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-     
-    <!--FACEBOOK LIKE BUTTON JAVASCRIPT SDK-->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    
-    <div class="page-wrapper">
-        
-        <!-- ******Header****** -->
-        <header class="header text-center">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">AVANT </span><span class="text-bold">Docs</span>
-                    </h1>
-                </div><!--//branding-->
-                <div class="tagline">
-                    <p>Documentação oficial da equipe de aeronaves autônomas AVANT-UFMG</p>
-                    
-                </div><!--//tagline-->
-                <div class="social-container">
-	               <div class="github-btn mb-2">
-                                            <a class="github-button" href="https://github.com/AVANTUFMG/AVANTLink" data-size="large" aria-label="https://github.com/AVANTUFMG/AVANTLink">AVANTLink</a>
-                                        </div>        
-                 </div><!--//social-container-->
-            </div><!--//container-->
-        </header><!--//header-->
-        
-        <section class="cards-section text-center">
-            <div class="container">
-                <h2 class="title">Aprenda com a gente!</h2>
-                <div class="intro">
-                    <p>Aqui vocẽ encontra tutoriais, dicas, arquivos e muito mais para o seu projeto de drone autônomo. Apesar de ser uma equipe competitiva, nós da AVANT compartilhamos todo o conhecimento adquirido sem nenhum custo para uso educacional. Sinta-se à vontade!</p>
-                   
-                </div><!--//intro-->
-                <div id="cards-wrapper" class="cards-wrapper row">
-                    <div class="item item-green col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <i class="icon fa fa-paper-plane"></i>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Tutoriais básicos</h3>
-                            <p class="intro">Conheça os componentes principais de uma aeronave</p>
-                            <a class="link" href="basics.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-pink item-2 col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Hardware embarcado</h3>
-                            <p class="intro">Estudos do hardware a bordo da aeronave</p>
-                            <a class="link" href="components.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-blue col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_datareport_alt"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Software embarcado</h3>
-                            <p class="intro">Códigos para controlar seu drone</p>
-                            <a class="link" href="charts.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-purple col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_lifesaver"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">AVANTLink (LEGACY)</h3>
-                            <p class="intro">Biblioteca em C++ própria da equipe que facilita a integração entre os dispositivos de uma aeronave</p>
-                            <a class="link" href="AVANTLink.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-					
-                    <div class="item item-red col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_book"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Guia de Aprendizado de Programação</h3>
-                            <p class="intro">Guia com todo o material e conteúdo necessário para equipe de eletrônica.</p>
-                            <a class="link" href="guia.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    
-                    <div class="item item-orange col-lg-4 col-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_lifesaver"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Python data viewer</h3>
-                            <p class="intro">Um projeto sobre um visualizador interativo de dados de aeronaves </p>
-                            <a class="link" href="projeto.html"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                </div><!--//cards-->
-                
-            </div><!--//container-->
-        </section><!--//cards-section-->
-    </div><!--//page-wrapper-->
-    
-    <footer class="footer text-center">
-        <div class="container">
-            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Conteúdo por <a href="https://avant-ufmg.wixsite.com/avantufmg" targe="_blank">AVANT-UFMG</a> | Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
-            
-        </div><!--//container-->
-    </footer><!--//footer-->
-     <script>
-includeHTML();
-</script> 
-    
-</body>
-</html> 
-
+    <head>
+        <title>AVANT Docs</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">    
+        <link rel="shortcut icon" href="favicon.ico">  
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- FontAwesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+        <!-- Plugins CSS -->    
+        <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    </head>
+</html>
