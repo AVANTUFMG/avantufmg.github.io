@@ -52,6 +52,14 @@ div.nav-bar {
   overflow: auto;
 }
 
+div.nav-bar .logo-icon {
+  width: auto;
+  height: 45px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 ul.nav-bar {
   background-color: #fafafa;
   list-style: none;
@@ -204,14 +212,6 @@ footer.content {
     width: 100%;
   }
 
-  div.nav-bar .logo-icon {
-    width: auto;
-    height: 45px;
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
   ul.nav-bar {
     background-color: #8dd7cf;
     height: auto;
@@ -244,4 +244,3 @@ footer.content {
     overflow: auto;
   }
 }
-
