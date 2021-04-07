@@ -115,7 +115,6 @@ header {
   background-color: #88c3c6;
   padding: 40px;
   padding-top: 20px;
-  color: #fff;
   float: left;
 
 }
@@ -182,10 +181,6 @@ footer {
   background-color: #88c3c6;
   color: #fff;
   justify-content: center;
-}
-
-footer.conteudo {
-  margin-left: 0;
 }
 
 footer.content {
@@ -264,10 +259,16 @@ footer.content {
     box-sizing: content-box;
   }
 
-  /* Header */
-  header:not(.content) {
-    margin-left: 120px;
+  /* Conteudo (o resto que nao eh navbar) */
+
+  #conteudo{
+  margin-left: 120px;
   }
+
+  #conteudo.container{
+    float: left;
+  }
+
 
   /* Content */
   .content {
@@ -277,11 +278,6 @@ footer.content {
   .content-menu {
     list-style: none;
     overflow: auto;
-  }
-
-  /* Footer */
-  footer {
-    margin-left: 120px;
   }
 
   .navbar-collapse {
@@ -296,6 +292,9 @@ footer.content {
   nav.nav-bar {
     height: 80px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
   }
 
   ul.nav-bar {
@@ -326,12 +325,18 @@ footer.content {
     padding: 0;
   }
 
-  /* Header */
+  /* Conteudo (o resto que nao eh navbar) */
+
+  #conteudo{
+    margin-top: 80px;
+  }
+
+  /* Header
   header {
     margin-top: 80px;
     width: 100%;
     overflow: auto;
-  }
+  } */
 
   /* Content */
   .content-menu {
@@ -371,10 +376,6 @@ footer.content {
     margin-top: 80px;
     width: 100%;
     overflow: auto;
-  }
-
-  header.content .logo-texto-medio {
-    display: none;
   }
 
   /* Content */
