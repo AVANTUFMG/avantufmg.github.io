@@ -37,7 +37,9 @@
 
   <body>
 
-    <header class="content">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="content">
         <div>
             <div class="content-info">
                 <i class="fas fa-code fa-lg"></i>
@@ -55,6 +57,7 @@
             </div>
         </div>
     </header>
+    </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -63,19 +66,20 @@
       </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="panel-footer">
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner conteudo">
         <div class="container">
             <div class="row">
-                <div id="logo-container" class="col-sm-4">
+                <div id="logo-container" class="col-sm-2">
                   <img class="logo-texto-pequeno footer" src="../assets/images/logo-texto.png">
                 </div>
-                <div id="endereco" class="col-sm-4">
+                <div id="endereco" class="col-sm-7">
                   Universidade Federal de Minas Gerais.<br>
                   Av. Pres. Antônio Carlos, 6627,<br>
                   Belo Horizonte, MG - CTM - Sala 2953 (Laboratório de simulação de voo).
                 </div>
-                <div id="contato" class="col-sm-4">
+                <div id="contato" class="col-sm-3">
                   avant.ufmg@gmail.com<br>
                   facebook.com/avantufmg<br>
                   instagram.com/avant_ufmg
@@ -83,6 +87,7 @@
               </div>
         </div>
     </footer>
+    </div>
 
     {% if site.google_analytics %}
       <script type="text/javascript">
