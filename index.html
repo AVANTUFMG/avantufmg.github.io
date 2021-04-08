@@ -9,7 +9,14 @@
         <meta name="description" content="">
         <meta name="author" content="">    
         <link rel="shortcut icon" href="assets/images/logo-icon.png">  
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!--(ANTIGO)--> 
+        <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+        
+        <!--novo-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
         <!-- FontAwesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
 
@@ -43,18 +50,20 @@
             </div>
         </nav>
 
-        <!-- Conteudo -->
+        <!-- Tudo que nao eh o menu -->
         <div id="conteudo">
-            <!--O height da imagem não muda com a diminuição da tela, o que deixa um pouco estranho, mas acho que eh -->
-            
+                        
             <div class="jumbotron">
-                <img class="img-responsive" src="assets/images/img-teste.png">
+                <!--Vai deformar a imagem pra ficar sempre com 300px de height, por isso as imagens aqui tem que ser mais horizontalizadas mais ou menos nessa altura-->
+                <img class="img-responsive" src="assets/images/img-teste.png" alt="Avião voando">
             </div>
             
 
-            <div class="container">
-                <h2>Conteúdo X</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam sapien, euismod varius est nec, laoreet molestie justo. Quisque turpis libero, finibus ac scelerisque ut, blandit in magna. In eu varius nisi, eget efficitur lacus. Vestibulum elit lorem, dapibus vitae posuere et, auctor in massa. Nam posuere hendrerit odio ut laoreet. Mauris placerat bibendum tincidunt. Integer et pretium lectus. Phasellus nec diam aliquet, eleifend diam non, hendrerit metus. Integer efficitur pharetra scelerisque.</p>
+            <div class="container bloco-index">
+                <div class="row">
+                    <h2>Aqui você encontrará materiais para estudo, tutoriais e dicas para seu projeto de drone autônomo.</h2>
+                    <p>Na AVANT, nós realizamos pesquisa e desenvolvimento na área de veículos aéreos autônomos não tripulados, mais conhecidos por um apelido mais simpático: drones autônomos! Fazemos desde a construção mecânica da aeronave até os algoritmos responsáveis pela autonomatização. Neste site você encontrará tutoriais e dicas para entender melhor como é o processo de programar um drone autônomo e quais áreas de controle, computação, bibliotecas, frameworks nós usamos.</p>
+                </div>
             </div>
 
             <!-- Footer -->

@@ -5,7 +5,7 @@
 /* General */
 body {
   font-size: 16px;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   background-color: #fafafa;
   margin: 0;
   height: 100%;
@@ -174,11 +174,36 @@ header.content {
 }
 
 /* Jumbotron */
-
+/*Pra funcionar bem, a imagem deve ter 300px de altura*/
 .jumbotron img{
   width: 100%;
-  height: 100%;
+  max-height: 300px;
+  min-height: 300px;
 }
+
+/* Headings da pag inicial */
+
+.bloco-index h2{
+  text-align: center;
+  font-size: 1.5em;
+  color: #54c3b7; /*Cor um pouco diferente*/
+  padding-left: 175px;
+  padding-right: 175px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+}
+
+.bloco-index p {
+  text-align: center;
+  padding-left: 250px;
+  padding-right: 250px;
+  justify-content: center;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+
 
 /* Footer */
 footer {
@@ -199,7 +224,7 @@ footer.content {
 .row {
   width: 100%;
   justify-content: center;
-  display: inline-flex;
+  /*display: inline-flex;*/
   margin: 0;
 }
 
@@ -282,7 +307,7 @@ footer.content {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 300px;
+    height: auto;
   } 
 
   /* Content */
@@ -351,7 +376,7 @@ footer.content {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 300px; /*auto*/
+    height: auto; 
   } 
 
 
