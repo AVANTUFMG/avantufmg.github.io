@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          },
+          Macros: {
+            eff: "{\\mathscr{f}}",
+            emm: "{\\mathscr{m}}",
+            enn: "{\\mathscr{n}}",
+            reals: "{\\mathbb{R}}"
+          },
+          extensions: ["[Contrib]/siunitx/siunitx.js", "color.js"],
+        },
+        SVG: {
+          font: "STIX-Web"
+        }
+      });
+      MathJax.Ajax.config.path["Contrib"] = "/assets/scripts";
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_SVG"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" >
+
+{% seo %}
+  </head>
+
+  <body>
+<!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner conteudo">
+        <div class="container">
+            <div class="row">
+                <div id="logo-container" class="col-sm-2">
+                  <img class="logo-texto-pequeno footer" src="../assets/images/logo-texto.png">
+                </div>
+                <div id="endereco" class="col-sm-7">
+                  Universidade Federal de Minas Gerais.<br>
+                  Av. Pres. Antônio Carlos, 6627,<br>
+                  Belo Horizonte, MG - CTM - Sala 2953 (Laboratório de simulação de voo).
+                </div>
+                <div id="contato" class="col-sm-3">
+                  avant.ufmg@gmail.com<br>
+                  facebook.com/avantufmg<br>
+                  instagram.com/avant_ufmg
+                </div>
+              </div>
+        </div>
+    </footer>
+    </div>
+      </body>
+</html>
