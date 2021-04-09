@@ -28,7 +28,6 @@ h2 {
 .container {
   min-height: 100%;
   position: relative;
-  margin: 0;
   padding: 0;
   width: 100%;
 }
@@ -237,9 +236,6 @@ hr.linha{
   height: 250px;
 }
 
-#mais-recentes .row{
-  display: inline-flex;
-}
 /* Footer */
 footer {
   position: relative;
