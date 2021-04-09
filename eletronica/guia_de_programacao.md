@@ -1,3 +1,8 @@
+---
+layout: default
+title: Guia de Programação
+---
+
 # Guia de Programação da Eletrônica <a class="anchor" id="topo"></a>
 
 **Autor**: Caio Conti Guidote Ribeiro
