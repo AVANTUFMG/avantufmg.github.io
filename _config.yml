@@ -3,6 +3,10 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+baseurl: ""
+url: "https://leohmcs.github.io/avantufmg.github.io/"
+show_downloads: false
+google_analytics: false
 include:
   - CONTRIBUTING.md
   - README.md
