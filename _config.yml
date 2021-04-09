@@ -1,9 +1,8 @@
-title: AVANT Docs
-baseurl: ""
-url: "https://leohmcs.github.io/avantufmg.github.io/"
-show_downloads: false
-google_analytics: false
-theme: minima
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
 include:
   - CONTRIBUTING.md
   - README.md
