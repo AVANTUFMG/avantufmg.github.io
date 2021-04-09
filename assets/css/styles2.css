@@ -118,7 +118,6 @@ header {
   padding: 40px;
   padding-top: 20px;
   float: left;
-
 }
 
 header.content {
@@ -181,23 +180,21 @@ header.content {
   max-height: 300px;
 }
 
-/* Headings da pag inicial */
+/* Headings e textos da index */
 
 .bloco-index h2{
   text-align: center;
+  font-weight: 400;
   font-size: 1.5em;
   color: #54c3b7; /*Cor um pouco diferente*/
   padding-left: 50px;
   padding-right: 50px;
   margin-top: 25px;
   margin-bottom: 15px;
-
 }
 
 .bloco-index p {
   text-align: center;
-  /*padding-left: 350px;
-  padding-right: 350px;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
@@ -208,15 +205,41 @@ header.content {
   color: #696969;
 }
 
+.bloco-index h3{
+  text-align: center;
+  font-size: 1.2em;
+  color: #54c3b7; /*Cor um pouco diferente*/
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Parte do ' Mais recente' com as caixas */
+#mais-recentes{
+  width: 800px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 hr.linha{
     background: #A9A9A9;
     border: 0;
     height: 1.5px;
-    width: 500px;
 }
 
+.carta{
+  border: solid black 1px;
+  margin: 20px;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+}
 
-
+#mais-recentes .row{
+  display: inline-flex;
+}
 /* Footer */
 footer {
   position: relative;
@@ -402,10 +425,11 @@ footer.content {
     font-size: 0.9em;
   }
 
-  hr.linha{
-    width: 375px;
-  }
 
+  /* Parte do ' Mais recente' com as caixas */
+  #mais-recentes{
+    width: 675px ;
+  }
 
   /* Header
   header {
@@ -462,8 +486,10 @@ footer.content {
     font-size: 0.8em;
   }
 
-  hr.linha{
-    width: 100px;
+
+  /* Parte do "Mais recentes" */
+  #mais-recentes{
+    width: 300px ;
   }
 
   /* Header */
