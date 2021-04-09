@@ -61,6 +61,7 @@ nav.nav-bar {
   position: fixed;
   overflow: auto;
   top: 0;
+  z-index: 1;
 }
 
 nav.nav-bar .logo-icon {
@@ -178,7 +179,6 @@ header.content {
 .jumbotron img{
   width: 100%;
   max-height: 300px;
-  min-height: 300px;
 }
 
 /* Headings da pag inicial */
@@ -187,8 +187,8 @@ header.content {
   text-align: center;
   font-size: 1.5em;
   color: #54c3b7; /*Cor um pouco diferente*/
-  padding-left: 175px;
-  padding-right: 175px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-top: 25px;
   margin-bottom: 15px;
 
@@ -196,11 +196,23 @@ header.content {
 
 .bloco-index p {
   text-align: center;
-  padding-left: 250px;
-  padding-right: 250px;
-  justify-content: center;
+  /*padding-left: 350px;
+  padding-right: 350px;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 700px;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: bold;
+  color: #696969;
+}
+
+hr.linha{
+    background: #A9A9A9;
+    border: 0;
+    height: 1.5px;
+    width: 500px;
 }
 
 
@@ -371,13 +383,28 @@ footer.content {
     margin-top: 80px;
   }
 
-    /* Jumbotron */
+  /* Jumbotron */
   .jumbotron{
     padding: 0;
     margin: 0;
     width: 100%;
     height: auto; 
   } 
+
+  /* Apresentacao */
+
+  .bloco-index h2{
+    font-size: 1.4em;
+  }
+
+  .bloco-index p {
+    width: 575px;
+    font-size: 0.9em;
+  }
+
+  hr.linha{
+    width: 375px;
+  }
 
 
   /* Header
@@ -422,6 +449,21 @@ footer.content {
 
   #conteudo{
     margin-top: 80px;
+  }
+
+  /* Apresentacao */
+
+  .bloco-index h2{
+    font-size: 1.3em;
+  }
+
+  .bloco-index p {
+    width: 350px;
+    font-size: 0.8em;
+  }
+
+  hr.linha{
+    width: 100px;
   }
 
   /* Header */
