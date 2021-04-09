@@ -1,5 +1,3 @@
-![Logo da AVANT](../assets/images/logo-texto.png)
-
 # Guia de Programação da Eletrônica <a class="anchor" id="topo"></a>
 
 **Autor**: Caio Conti Guidote Ribeiro
