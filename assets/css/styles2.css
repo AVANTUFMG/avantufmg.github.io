@@ -181,6 +181,10 @@ header.content {
 
 /* Headings e textos da index */
 
+.bloco-index{
+  margin: 0;
+}
+
 .bloco-index h2{
   text-align: center;
   font-weight: 400;
@@ -236,11 +240,28 @@ hr.linha{
   height: 250px;
 }
 
+/* Parte do 'Sobre' */
+#sobre.bloco-index{
+  background-color: #7ae1d4;
+  border: solid 2px #43d6c4; /*Pode ser ajustada*/
+  padding-bottom: 10px;
+}
+
+#sobre h2{
+  color: #fafafa;
+}
+
+#sobre .row > p{
+  color: #fafafa;
+  padding-bottom: 10px;
+  max-width: 25%;
+}
+
 /* Footer */
 footer {
   position: relative;
   clear: both;
-  height:130px;
+  height: 130px;
   margin-top: -130px;
   background-color: #88c3c6;
   color: #fff;
@@ -326,7 +347,7 @@ footer.content {
   /* Conteudo (o resto que nao eh navbar) */
 
   #conteudo{
-  margin-left: 120px;
+  padding-left: 120px;
   }
 
   #conteudo.container{
@@ -339,6 +360,7 @@ footer.content {
     margin: 0;
     width: 100%;
     height: auto;
+    overflow: auto;
   } 
 
   /* Content */
