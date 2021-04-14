@@ -182,6 +182,8 @@ header.content {
 
 .bloco-index{
   margin: 0;
+  padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .bloco-index h2{
@@ -191,8 +193,6 @@ header.content {
   color: #54c3b7; /*Cor um pouco diferente*/
   padding-left: 50px;
   padding-right: 50px;
-  margin-top: 25px;
-  margin-bottom: 15px;
 }
 
 .bloco-index p {
@@ -217,6 +217,9 @@ header.content {
   margin-bottom: 15px;
 }
 
+#apresentacao{
+  margin: auto;
+}
 /* Parte do ' Mais recente' com as caixas */
 #mais-recentes{
   width: 800px ;
@@ -240,10 +243,10 @@ hr.linha{
 }
 
 /* Parte do 'Sobre' */
+
 #sobre.bloco-index{
   background-color: #7ae1d4;
   border: solid 2px #43d6c4; /*Pode ser ajustada*/
-  padding-bottom: 10px;
 }
 
 #sobre h2{
@@ -252,8 +255,19 @@ hr.linha{
 
 #sobre .row > p{
   color: #fafafa;
-  padding-bottom: 10px;
   max-width: 25%;
+}
+
+/* Parte do "Doacoes" */
+#but-doacao-container{
+  padding-top: 30px;
+}
+
+#but-doacao{
+  color: #fafafa;
+  background-color: #54c3b7;
+  border: 0;
+  font-size: 0.9em;
 }
 
 /* Footer */
