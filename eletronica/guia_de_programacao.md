@@ -1,5 +1,6 @@
 ---
 title: Guia de Programação
+layout: default
 ---
 
 # Guia de Programação da Eletrônica <a class="anchor" id="topo"></a>
