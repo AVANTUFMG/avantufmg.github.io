@@ -30,17 +30,17 @@
     <body>
         <!-- Menu de Navegação -->
         <nav class="nav-bar">
-            <a href="index.html">
-                <img class="logo-icon" src="assets/images/logo-icon.png">
+            <a href="/">
+                <img class="logo-icon" src="/assets/images/logo-icon.png">
             </a>
             <button class="toggle-colapse">
                 <i class="fas fa-bars fa-lg"></i>
             </button>
             <div class="navbar-collapse">
                 <ul class="nav-bar">
-                    <li><a href="eletronica/eletronica.html">Eletrônica</a></li>
-<li><a href="mecanica/mecanica.html">Mecânica</a></li>
-<li><a href="gestao/gestao.html">Gestão</a></li>
+                    <li><a href="/eletronica/eletronica.html">Eletrônica</a></li>
+<li><a href="/mecanica/mecanica.html">Mecânica</a></li>
+<li><a href="/gestao/gestao.html">Gestão</a></li>
 <li><a href="">Sobre</a></li>
 <li><a href="">Contribua</a></li>
 <li><a href="">Contato</a></li>
@@ -51,18 +51,77 @@
         
         <!-- Tudo que nao eh o menu -->
         <div id="conteudo">
-            <p>#Teste do markdown</p>
+            <h1 id="readme">README</h1>
+
+<h2 id="basics">Basics</h2>
+
+<h3 id="front-matter">Front Matter</h3>
 
 <ul>
-  <li>Espero que tenha dado certo</li>
+  <li>De maneira geral, pra ficar com o layout padronizado (como todas estao) toda nova pagina deve ter a <em>Front Matter</em> no seu inicio, que consiste basicamente em:</li>
 </ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: (titulo da pag)
+---
+
+</code></pre></div></div>
+<ul>
+  <li>Embaixo disso, pode começar a escrever <strong>direto</strong> na linguagem de marcaçao que for, seja HTML, Markdown ou alguma outra que o Jekyll suporte.
+    <ul>
+      <li>Ainda, se for escrever em HTML, pode começar direto na tag de conteudo mesmo que voce quiser, o <code class="highlighter-rouge">default</code> ja abstrai aquele inicio de todo arquivo HTML pra ajudar a ficar padronizado e evitar repetir codigo mesmo. (Vide qualquer uma das paginas pra ter um exemplo).</li>
+    </ul>
+  </li>
+  <li>Esse <code class="highlighter-rouge">layout: default</code> so vai mudar se tiver um outro modelo de layout.</li>
+  <li>Podem ser inseridas mais variaveis tambem. Pra mais informaçoes: <a href="https://jekyllrb.com/docs/step-by-step/03-front-matter/">https://jekyllrb.com/docs/step-by-step/03-front-matter/</a></li>
+</ul>
+
+<h2 id="defaulthtml">default.html</h2>
+
+<ul>
+  <li>Eh nesse arquivo que fica o layout padrao da pagina, mais especificamente com:
+    <ul>
+      <li><code class="highlighter-rouge">&lt;head&gt;</code></li>
+      <li>Navbar</li>
+      <li>Footer</li>
+    </ul>
+  </li>
+  <li>A variavel <code class="highlighter-rouge">eh o que substitui todo o conteudo de uma pagina no `default.html`, o que ta no lugar de</code> eh o que diferencia uma pagina da outra. Alem disso, ela ta dentro de um <code class="highlighter-rouge">&lt;div id="conteudo"&gt;</code>, junto com o <code class="highlighter-rouge">&lt;footer&gt;</code> porque faz parte da estruturaçao da pagina.</li>
+</ul>
+
+<h3 id="head">&lt;head&gt;</h3>
+
+<ul>
+  <li>Alem do padrao que precisa pro HTML e CSS, no head tem:
+    <ul>
+      <li>Chamada do arquivo de estilo CSS.</li>
+      <li>Chamada da fonte.</li>
+      <li>Chamada do Bootstrap.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="navbar">Navbar</h3>
+
+<ul>
+  <li>A navbar ja eh responsive, mudando de forma pra telas medias e <em>mobile</em>.</li>
+  <li>Dentro da navbar tem alguns codigos Liquid, que eh parte da logica do Jekyll pra estruturar a pagina.</li>
+  <li>Basicamente ela separa a lista de links em um outro arquivo html <code class="highlighter-rouge">navigation.html</code>, e usa algumas logicas pra mudar a cor do link da pagina atual.</li>
+</ul>
+
+<h3 id="footer">Footer</h3>
+<ul>
+  <li>O footer eh bem simples, o estilo dele ta definido mais no arquivo CSS mesmo.</li>
+</ul>
+
 
             <!-- Footer -->
             <footer>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div id="logo-container" class="col">
-                          <img class="logo-texto-pequeno footer" src="assets/images/logo-texto.png">
+                          <img class="logo-texto-pequeno footer" src="/assets/images/logo-texto.png">
                         </div>
                         <div id="endereco" class="col">
                           Universidade Federal de Minas Gerais.<br>
