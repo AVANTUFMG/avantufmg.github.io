@@ -1,4 +1,4 @@
-#Isso aqui permite usar uma logica em Ruby (ou Liquid n tenho ctz) no navigation.html
+#Isso aqui permite usar uma logica de Liquid no navigation.html
 
 - name: Eletrônica
   link: "/eletronica/eletronica.html"
