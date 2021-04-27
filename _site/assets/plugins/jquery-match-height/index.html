@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+    <head>
+        <title>jquery.matchHeight.js #</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">    
+        <link rel="shortcut icon" href="../assets/images/logo-icon.png">  
+        
+        <!--novo-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+        <!-- FontAwesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../assets/novo-bootstrap/css/bootstrap.min.css">
+        <!--NOVO BOOTSTRAP-->
+
+        <!-- Plugins CSS -->    
+        <link rel="stylesheet" href="../assets/plugins/elegant_font/css/style.css">    
+        
+        <!-- Theme CSS -->
+
+        <link id="theme-style" rel="stylesheet" href="../assets/css/styles2.css">
+    </head>
+    <body>
+        <!-- Menu de Navegação -->
+        <nav class="nav-bar">
+            <a href="/">
+                <img class="logo-icon" src="/assets/images/logo-icon.png">
+            </a>
+            <button class="toggle-colapse">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="nav-bar">
+                    
+    <li>
+        <a href="/eletronica/eletronica.html" >Eletrônica</a>
+    </li>
+
+    <li>
+        <a href="/mecanica/mecanica.html" >Mecânica</a>
+    </li>
+
+    <li>
+        <a href="/gestao/gestao.html" >Gestão</a>
+    </li>
+
+    <li>
+        <a href="" >Sobre</a>
+    </li>
+
+    <li>
+        <a href="" >Contribua</a>
+    </li>
+
+    <li>
+        <a href="" >Contato</a>
+    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tudo que nao eh o menu -->
+        <div id="conteudo">
+            <h1 id="jquerymatchheightjs">jquery.matchHeight.js</h1>
+<blockquote>
+<p><em>matchHeight</em> makes the height of all selected elements exactly equal.<br>
+It handles many edge cases that cause similar plugins to fail.</p>
+</blockquote>
+<p><a href="http://brm.io/jquery-match-height/">brm.io/jquery-match-height</a></p>
+<h3 id="demo">Demo</h3>
+<p>See the <a href="http://brm.io/jquery-match-height-demo">jquery.matchHeight.js demo</a>.</p>
+<p><a href="http://brm.io/jquery-match-height-demo"><img src="http://brm.io/img/content/jquery-match-height/jquery-match-height.png" alt="jquery.matchHeight.js screenshot" /></a></p>
+<h3 id="features">Features</h3>
+<ul>
+<li>match the heights of elements anywhere on the page</li>
+<li>row aware, handles floating elements</li>
+<li>responsive, automatically updates on window resize (can be throttled for performance)</li>
+<li>handles mixed <code>padding</code>, <code>margin</code>, <code>border</code> values (even if every element has them different)</li>
+<li>handles images and other media (updates automatically after loading)</li>
+<li>handles hidden or none-visible elements (e.g. those inside tab controls)</li>
+<li>accounts for <code>box-sizing</code></li>
+<li>data attributes API</li>
+<li>can be removed when needed</li>
+<li>maintain scroll position correctly</li>
+<li>callback events</li>
+<li>tested in IE8+, Chrome, Firefox, Chrome Android</li>
+</ul>
+<h3 id="status">Status</h3>
+<p>Current version is <code>v0.5.2</code>. I’ve fully tested it and it works well, but if you use it make sure you test fully too.
+Please report any <a href="https://github.com/liabru/jquery-match-height/issues">issues</a> you find.</p>
+<h3 id="install">Install</h3>
+<p><a href="http://jquery.com/download/">jQuery</a> is required, so include it first.
+<br>Download <a href="https://github.com/liabru/jquery-match-height/blob/master/jquery.matchHeight.js">jquery.matchHeight.js</a> and include the script in your HTML file:</p>
+<pre><code>&lt;script src=&quot;jquery.matchHeight.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4 id="or-install-using-a-hrefhttpboweriobowera">Or install using <a href="http://bower.io/">Bower</a></h4>
+<pre><code>bower install matchHeight
+</code></pre>
+<h3 id="usage">Usage</h3>
+<pre><code>$(elements).matchHeight(byRow);
+</code></pre>
+<p>Where <code>byRow</code> is a boolean that enables or disables row detection, default is <code>true</code>.<br>
+You should apply this on the <a href="http://api.jquery.com/ready/">DOM ready</a> event.</p>
+<p>See the included <a href="https://github.com/liabru/jquery-match-height/blob/master/test.html">test.html</a> for a working example.</p>
+<h3 id="examples">Examples</h3>
+<pre><code>$(function() {
+	$('.item').matchHeight();
+});
+</code></pre>
+<p>Will set all elements with the class <code>item</code> to the height of the tallest.<br>
+If the items are on multiple rows, the items of each row will be set to the tallest of that row.</p>
+<pre><code>&lt;div data-mh=&quot;my-group&quot;&gt;My text&lt;/div&gt;
+&lt;div data-mh=&quot;my-group&quot;&gt;Some other text&lt;/div&gt;
+&lt;div data-mh=&quot;my-other-group&quot;&gt;Even more text&lt;/div&gt;
+&lt;div data-mh=&quot;my-other-group&quot;&gt;The last bit of text&lt;/div&gt;
+</code></pre>
+<p>Will set both elements in <code>my-group</code> to the same height, then both elements in <code>my-other-group</code> to be the same height respectively.</p>
+<p>See the included <a href="https://github.com/liabru/jquery-match-height/blob/master/test.html">test.html</a> for a working example.</p>
+<h3 id="advanced-usage">Advanced Usage</h3>
+<p>There are a few internal properties and functions you should know about:</p>
+<h4 id="data-api">Data API</h4>
+<p>Use the data attribute <code>data-match-height=&quot;group-name&quot;</code> (or <code>data-mh</code> shorthand) where <code>group-name</code> is an arbitrary string to denote which elements should be considered as a group.</p>
+<p>All elements with the same group name will be set to the same height when the page is loaded, regardless of their position in the DOM, without any extra code required.</p>
+<p>Note that <code>byRow</code> will be enabled when using the data API, if you don’t want this then use the alternative method above.</p>
+<h4 id="callback-events">Callback events</h4>
+<p>Since matchHeight automatically handles updating the layout after certain window events, you can supply functions as global callbacks if you need to be notified:</p>
+<pre><code>$.fn.matchHeight._beforeUpdate = function(event, groups) {
+    // do something before any updates are applied
+}
+
+$.fn.matchHeight._afterUpdate = function(event, groups) {
+    // do something after all updates are applied
+}
+</code></pre>
+<p>Where <code>event</code> a jQuery event object (e.g. <code>load</code>, <code>resize</code>, <code>orientationchange</code>) and <code>groups</code> is a reference to <code>$.fn.matchHeight._groups</code> (see below).</p>
+<h4 id="removing">Removing</h4>
+<p>It is possible to remove any matchHeight bindings for a given set of elements like so</p>
+<pre><code>$('.item').matchHeight('remove');
+</code></pre>
+<h4 id="manually-trigger-an-update">Manually trigger an update</h4>
+<pre><code>$.fn.matchHeight._update()
+</code></pre>
+<p>If you need to manually trigger an update of all currently set equal heights groups, for example if you’ve modified some content.</p>
+<h4 id="manually-apply-match-height">Manually apply match height</h4>
+<pre><code>$.fn.matchHeight._apply(elements, byRow)
+</code></pre>
+<p>Use the apply function directly if you wish to avoid the automatic update functionality.</p>
+<h4 id="throttling-resize-updates">Throttling resize updates</h4>
+<pre><code>$.fn.matchHeight._throttle = 80;
+</code></pre>
+<p>By default, the <code>_update</code> method is throttled to execute at a maximum rate of once every <code>80ms</code>.
+Decreasing the above <code>_throttle</code> property will update your layout quicker, appearing smoother during resize, at the expense of performance.
+If you experience lagging or freezing during resize, you should increase the <code>_throttle</code> property.</p>
+<h4 id="maintain-scroll-position">Maintain scroll position</h4>
+<pre><code>$.fn.matchHeight._maintainScroll = true;
+</code></pre>
+<p>Under certain conditions where the size of the page is dynamically changing, such as during resize or when adding new elements, browser bugs cause the page scroll position to change unexpectedly.</p>
+<p>If you are observing this behaviour, use the above line to automatically attempt to force scroll position to be maintained (approximately). This is a global setting and by default it is <code>false</code>.</p>
+<h4 id="accessing-groups-directly">Accessing groups directly</h4>
+<pre><code>$.fn.matchHeight._groups
+</code></pre>
+<p>The array that contains all element groups that have had <code>matchHeight</code> applied. Used for automatically updating on resize events. Search and modify this array if you need to remove any groups or elements, for example if you’re deleting elements.</p>
+<h3 id="known-limitations">Known limitations</h3>
+<h4 id="css-transitions-and-animations-are-not-supported">CSS transitions and animations are not supported</h4>
+<p>You should ensure that there are no transitions or other animations that will delay the height changes of the elements you are matching, including any <code>transition: all</code> rules. Otherwise the plugin will produce unexpected results, as animations can’t be accounted for.</p>
+<h4 id="delayed-webfonts-may-cause-incorrect-height">Delayed webfonts may cause incorrect height</h4>
+<p>Some browsers <a href="http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/">do not wait</a> for webfonts to load before firing the window load event, so if the font loads too slowly the plugin may produce unexpected results.</p>
+<p>If this is a problem, you should call <code>_update</code> once your font has loaded by using something like the <a href="https://github.com/typekit/webfontloader">webfontloader</a> script.</p>
+<h4 id="content-changes-require-a-manual-update">Content changes require a manual update</h4>
+<p>If you change the content inside an element that has had <code>matchHeight</code> applied, then you must manually call <code>$.fn.matchHeight._update()</code> afterwards. This will update of all currently set equal heights groups.</p>
+<h3 id="changelog">Changelog</h3>
+<p>To see what’s new or changed in the latest version, see the <a href="https://github.com/liabru/jquery-match-height/blob/master/CHANGELOG.md">changelog</a></p>
+<h3 id="license">License</h3>
+<p>jquery.matchHeight.js is licensed under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>
+<br/>Copyright (c) 2014 Liam Brummitt</p>
+<p>This license is also supplied with the release and source code.
+<br/>As stated in the license, absolutely no warranty is provided.</p>
+<h5 id="why-not-use-css">Why not use CSS?</h5>
+<p>Making robust, responsive equal height columns for <em>arbitrary content</em> is <a href="http://filamentgroup.com/lab/setting_equal_heights_with_jquery/">difficult or impossible</a> to do with CSS alone (at least without hacks or trickery, in a backwards compatible way).</p>
+<p>Note you should probably ensure your layout is still usable if JavaScript is disabled.</p>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div id="logo-container" class="col">
+                          <img class="logo-texto-pequeno footer" src="/assets/images/logo-texto.png">
+                        </div>
+                        <div id="endereco" class="col">
+                          Universidade Federal de Minas Gerais.<br>
+                          Av. Pres. Antônio Carlos, 6627,<br>
+                          Belo Horizonte, MG - CTM - Sala 2953 (Laboratório de simulação de voo).
+                        </div>
+                        <div id="contato" class="col">
+                          avant.ufmg@gmail.com<br>
+                          facebook.com/avantufmg<br>
+                          instagram.com/avant_ufmg
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

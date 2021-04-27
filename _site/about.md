@@ -1,6 +1,3 @@
----
----
-
 # README
 
 ## Basics
@@ -22,6 +19,9 @@ title: (titulo da pag)
 	+ Ainda, se for escrever em HTML, pode começar direto na tag de conteudo mesmo que voce quiser, o `default` ja abstrai aquele inicio de todo arquivo HTML pra ajudar a ficar padronizado e evitar repetir codigo mesmo. (Vide qualquer uma das paginas pra ter um exemplo).
 - Esse `layout: default` so vai mudar se tiver um outro modelo de layout.
 - Podem ser inseridas mais variaveis tambem. Pra mais informaçoes: <https://jekyllrb.com/docs/step-by-step/03-front-matter/>
+
+
+
 
 ## default.html
 
