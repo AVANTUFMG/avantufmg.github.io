@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <head>
+        <title>README</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">    
+        <link rel="shortcut icon" href="../assets/images/logo-icon.png">  
+        
+        <!--novo-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+        <!-- FontAwesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../assets/novo-bootstrap/css/bootstrap.min.css">
+        <!--NOVO BOOTSTRAP-->
+
+        <!-- Plugins CSS -->    
+        <link rel="stylesheet" href="../assets/plugins/elegant_font/css/style.css">    
+        
+        <!-- Theme CSS -->
+
+        <link id="theme-style" rel="stylesheet" href="../assets/css/styles2.css">
+    </head>
+    <body>
+        <!-- Menu de Navegação -->
+        <nav class="nav-bar">
+            <a href="/">
+                <img class="logo-icon" src="/assets/images/logo-icon.png">
+            </a>
+            <button class="toggle-colapse">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="nav-bar">
+                    
+    <li>
+        <a href="/eletronica/eletronica.html" >Eletrônica</a>
+    </li>
+
+    <li>
+        <a href="/mecanica/mecanica.html" >Mecânica</a>
+    </li>
+
+    <li>
+        <a href="/gestao/gestao.html" >Gestão</a>
+    </li>
+
+    <li>
+        <a href="" >Sobre</a>
+    </li>
+
+    <li>
+        <a href="" >Contribua</a>
+    </li>
+
+    <li>
+        <a href="" >Contato</a>
+    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tudo que nao eh o menu -->
+        <div id="conteudo">
+            <h1 id="readme">README</h1>
+<h2 id="basics">Basics</h2>
+<ul>
+<li>O arquivo CSS em que estão os estilos e tudo é o <code>syles2.css</code>, só ir nele se precisar mudar o estilo de algo.</li>
+</ul>
+<h3 id="front-matter">Front Matter</h3>
+<ul>
+<li>De maneira geral, pra ficar com o layout padronizado (como todas estao) toda nova pagina deve ter a <em>Front Matter</em> no seu inicio, que consiste basicamente em:</li>
+</ul>
+<pre><code>---
+layout: default
+title: (titulo da pag)
+---
+
+</code></pre>
+<ul>
+<li>Embaixo disso, pode começar a escrever <strong>direto</strong> na linguagem de marcaçao que for, seja HTML, Markdown ou alguma outra que o Jekyll suporte.
+<ul>
+<li>Ainda, se for escrever em HTML, pode começar direto na tag de conteudo mesmo que voce quiser, o <code>default</code> ja abstrai aquele inicio de todo arquivo HTML pra ajudar a ficar padronizado e evitar repetir codigo mesmo. (Vide qualquer uma das paginas pra ter um exemplo).</li>
+</ul>
+</li>
+<li>Esse <code>layout: default</code> so vai mudar se tiver um outro modelo de layout.</li>
+<li>Podem ser inseridas mais variaveis tambem. Pra mais informaçoes: <a href="https://jekyllrb.com/docs/step-by-step/03-front-matter/">https://jekyllrb.com/docs/step-by-step/03-front-matter/</a></li>
+</ul>
+<h2 id="defaulthtml">default.html</h2>
+<ul>
+<li>Eh nesse arquivo que fica o layout padrao da pagina, mais especificamente com:
+<ul>
+<li><code>&lt;head&gt;</code></li>
+<li>Navbar</li>
+<li>Footer</li>
+</ul>
+</li>
+<li>A variavel <code>eh o que substitui todo o conteudo de uma pagina no `default.html`, o que ta no lugar de</code> eh o que diferencia uma pagina da outra. Alem disso, ela ta dentro de um <code>&lt;div id=&quot;conteudo&quot;&gt;</code>, junto com o <code>&lt;footer&gt;</code> porque faz parte da estruturaçao da pagina.</li>
+</ul>
+<h3 id="head"><head></h3>
+<ul>
+<li>Alem do padrao que precisa pro HTML e CSS, no head tem:
+<ul>
+<li>Chamada do arquivo de estilo CSS.</li>
+<li>Chamada da fonte.</li>
+<li>Chamada do Bootstrap.</li>
+</ul>
+</li>
+</ul>
+<h3 id="navbar">Navbar</h3>
+<ul>
+<li>A navbar ja eh responsive, mudando de forma pra telas medias e <em>mobile</em>.</li>
+<li>Dentro da navbar tem alguns codigos Liquid, que eh parte da logica do Jekyll pra estruturar a pagina.</li>
+<li>Basicamente ela separa a lista de links em um outro arquivo html <code>navigation.html</code>, e usa algumas logicas pra mudar a cor do link da pagina atual.</li>
+</ul>
+<h3 id="footer">Footer</h3>
+<ul>
+<li>O footer eh bem simples, o estilo dele ta definido mais no arquivo CSS mesmo.</li>
+</ul>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div id="logo-container" class="col">
+                          <img class="logo-texto-pequeno footer" src="/assets/images/logo-texto.png">
+                        </div>
+                        <div id="endereco" class="col">
+                          Universidade Federal de Minas Gerais.<br>
+                          Av. Pres. Antônio Carlos, 6627,<br>
+                          Belo Horizonte, MG - CTM - Sala 2953 (Laboratório de simulação de voo).
+                        </div>
+                        <div id="contato" class="col">
+                          avant.ufmg@gmail.com<br>
+                          facebook.com/avantufmg<br>
+                          instagram.com/avant_ufmg
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

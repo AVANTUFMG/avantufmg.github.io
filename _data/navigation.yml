@@ -1,0 +1,14 @@
+#Isso aqui permite usar uma logica de Liquid no navigation.html
+
+- name: Eletrônica
+  link: "/eletronica/eletronica.html"
+- name: Mecânica 
+  link: "/mecanica/mecanica.html"
+- name: Gestão 
+  link: "/gestao/gestao.html"
+- name: Sobre 
+  link: ""
+- name: Contribua 
+  link: ""
+- name: Contato
+  link: ""
